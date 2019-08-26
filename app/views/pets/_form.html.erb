@@ -1,0 +1,17 @@
+<div class="form">
+  <%= form_with(model: @pet, local: true) do |f| %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, required: true, placeholder: "pet's name" %>
+    </div>
+    <div class="field">
+      <%= f.label :age %>
+      <%= f.text_field :age, min: 0, placeholder: "age in years" %>
+    </div>
+    <div class="field">
+      <%= f.label :species %>
+      <%= f.text_field :species, placeholder: "kind of animal" %>
+    </div>
+    <%= f.submit %>
+  <% end %>
+</div>

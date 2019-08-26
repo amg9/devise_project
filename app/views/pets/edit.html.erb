@@ -1,0 +1,4 @@
+<h1>Edit Pet</h1>
+<%= render "form" %>
+<%= button_to "Remove Pet", pet_path(@pet), method: :delete %>
+<%= link_to "Back", pet_path(@pet) %>
