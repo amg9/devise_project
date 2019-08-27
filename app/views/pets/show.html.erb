@@ -2,4 +2,11 @@
 <h2> the <%= @pet.age %> year old <%= @pet.species %></h2>
 <%= link_to "Edit Pet", edit_pet_path %>
 <br />
+<h4>Comments</h4>
+<% @pet.comments.each do |comment| %>
+  <%= render 'comments/comment', { comment: comment } %>
+<% end %>
+<br />
+<%= link_to "Add Comment", new_pet_comment_path(@pet) %>
+<br />
 <%= link_to "Back", pets_path %>

@@ -1,0 +1,6 @@
+<h1>Add a comment</h1>
+<%= form_with(model: [@pet, @comment], local: true) do |f| %>
+  <%= f.label :body %>
+  <%= f.text_area :body, required: true %>
+  <%= f.submit %>
+<% end %>
