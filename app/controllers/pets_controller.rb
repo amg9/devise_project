@@ -15,8 +15,10 @@ class PetsController < ApplicationController
   def create
     @pet = current_user.pets.new(pet_params)
     if @pet.save
+      flash[:success] = "Pet Created"
       redirect_to pets_path
     else
+      flash[:error] = "Error #{@pet.errors.full_messages.join("\n")}"
       render :new
     end
   end

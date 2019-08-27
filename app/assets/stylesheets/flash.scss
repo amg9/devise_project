@@ -1,0 +1,18 @@
+.alert {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.alert-success, .alert-notice {
+  color: darkgreen;
+  background-color: lightgreen;
+  border-color: darkgreen;
+}
+
+.alert-error, .alert-alert {
+  color: darkred;
+  background-color: lightpink;
+  border-color: darkred;
+}
